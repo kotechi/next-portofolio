@@ -1,0 +1,17 @@
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slider {
+  animation: scroll-left 20s linear infinite;
+  display: flex;
+}
+
+.hidescrollbar::-webkit-scrollbar {
+  display: none;
+}

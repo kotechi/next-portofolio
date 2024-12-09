@@ -1,0 +1,63 @@
+.bgBrand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 100px;
+  background: linear-gradient(
+      0deg,
+      rgba(50, 28, 49, 0.2),
+      rgba(50, 28, 49, 0.2)
+    ),
+    #000000;
+  border-width: 0px 4px 4px 4px;
+  border-style: solid;
+  border-color: #8b0686;
+  border-radius: 13px;
+}
+
+/* Aditiya Ganzz.. */
+
+.brandLogo {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Aditiya Ganzz.. */
+.brandTextWhite {
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/* Aditiya Ganzz.. */
+.brandText {
+  position: absolute;
+  left: 33.67%;
+  right: 33.67%;
+  top: 46.25%;
+  bottom: 45.42%;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #920072;
+}
+
+
