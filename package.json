@@ -1,6 +1,4 @@
-"scripts": {
-  "build": "next build && next export"
-}
+
 {
   "name": "next-portofolio",
   "version": "0.1.0",
