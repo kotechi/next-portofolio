@@ -10,15 +10,21 @@ const Carousel: React.FC = () => {
     intervalRef.current = setInterval(() => {
       if (carouselRef.current) {
         const { scrollLeft, clientWidth, scrollWidth } = carouselRef.current;
-        carouselRef.current.scrollBy({ left: 1, behavior: 'smooth' });
+        
+        // Safely scroll
+        carouselRef.current.scrollBy({ 
+          left: clientWidth > 0 ? 1 : 0, 
+          behavior: 'smooth' 
+        });
 
+        // Reset scroll position when reaching ends
         if (scrollLeft + clientWidth >= scrollWidth - 1) {
           carouselRef.current.scrollTo({ left: 0, behavior: 'smooth' });
         } else if (scrollLeft <= 0) {
           carouselRef.current.scrollTo({ left: scrollWidth, behavior: 'smooth' });
         }
       }
-    }, 50); // Interval kecil untuk scrolling lebih smooth
+    }, 50);
   };
 
   useEffect(() => {
@@ -43,16 +49,20 @@ const Carousel: React.FC = () => {
     startAutoplay();
   };
 
-  // Function to add more items when reaching the right end
   const handleScroll = () => {
-    if (
-      carouselRef.current &&
-      carouselRef.current.scrollLeft + carouselRef.current.clientWidth >=
-        carouselRef.current.scrollWidth - 1
-    ) {
-      setItems((prevItems) => [...prevItems, ...prevItems]);
-    } else if (carouselRef.current.scrollLeft <= 0) {
-      setItems((prevItems) => [...prevItems, ...prevItems]);
+    // Use optional chaining and null checks
+    const carousel = carouselRef.current;
+    if (carousel) {
+      const { scrollLeft, clientWidth, scrollWidth } = carousel;
+      
+      // Add more items when reaching scroll ends
+      if (scrollLeft + clientWidth >= scrollWidth - 1 || scrollLeft <= 0) {
+        setItems((prevItems) => {
+          // Prevent infinite growth
+          const newItems = [...prevItems, ...prevItems];
+          return newItems.slice(0, Math.min(newItems.length, 20)); // Limit to 20 items
+        });
+      }
     }
   };
 
