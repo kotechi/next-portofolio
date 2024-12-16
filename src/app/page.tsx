@@ -83,8 +83,7 @@ export default function Home() {
           </div>
         </div>
       </nav>
-
-      {/* Header Section */}
+      {/* header */}
       <BackgroundBeamsWithCollision>
         <div className="text-center tracking-tight pt-16">
           <TypewriterEffectHeader />
@@ -105,10 +104,11 @@ export default function Home() {
           <TextGenerateEffectHeader />
         </div>
       </BackgroundBeamsWithCollision>
+      
+      <div className="min-w-full h-24  bg-[#920072]">
 
-      <div className="min-w-full h-1 bg-[#920072]"></div>
-
-      {/* About Section - Responsive */}
+      </div>
+      {/* about */}
       <div
         id="about"
         className="bg-black bg-opacity-50 min-h-screen flex justify-center items-center px-4"
