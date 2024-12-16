@@ -83,6 +83,7 @@ export default function Home() {
           </div>
         </div>
       </nav>
+      <ScrollHideDiv></ScrollHideDiv>
       {/* header */}
       <BackgroundBeamsWithCollision>
         <div className="text-center tracking-tight pt-16">
@@ -104,10 +105,7 @@ export default function Home() {
           <TextGenerateEffectHeader />
         </div>
       </BackgroundBeamsWithCollision>
-      
-      <div className="min-w-full h-24  bg-[#920072]">
 
-      </div>
       {/* about */}
       <div
         id="about"
