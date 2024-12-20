@@ -17,15 +17,15 @@ export function FloatingDockBlock() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/",
     },
 
     {
-      title: "Products",
+      title: "Projects",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#projects",
     },
     {
       title: "Components",
@@ -54,10 +54,8 @@ export function FloatingDockBlock() {
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/kotechi",
     },
   ];
-  return (
-      <FloatingDock items={links} />
-  );
+  return <FloatingDock items={links} />;
 }

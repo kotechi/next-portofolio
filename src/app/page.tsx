@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <ScrollHideDiv></ScrollHideDiv>
+
       {/* header */}
       <BackgroundBeamsWithCollision>
         <div className="text-center tracking-tight pt-16">
@@ -186,7 +186,7 @@ export default function Home() {
       </div>
 
       {/* project */}
-      <div className=" flex justify-center mb-2">
+      <div className=" flex justify-center mb-2" id="project">
         <div>
           <h1 className="relative text-2xl sm:text-4xl font-bold my-6">
             <span className="z-20 opacity-75 text-[#af038a]">my projects</span>
